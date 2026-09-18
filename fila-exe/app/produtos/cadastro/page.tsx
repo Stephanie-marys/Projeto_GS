@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { listarProdutos } from "@/lib/produtos/store";
 import ProdutoForm from "./ProdutoForm";
 
@@ -6,9 +7,17 @@ export default function CadastroProdutoPage() {
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-10">
-      <h1 className="text-2xl font-bold text-gray-900">
-        Cadastro de Produtos da Cantina
-      </h1>
+      <div className="flex items-center justify-between gap-4">
+        <h1 className="text-2xl font-bold text-gray-900">
+          Cadastro de Produtos da Cantina
+        </h1>
+        <Link
+          href="/produtos/catalogo"
+          className="whitespace-nowrap text-sm font-medium text-emerald-700 hover:underline"
+        >
+          Ver catálogo
+        </Link>
+      </div>
       <p className="mt-1 text-sm text-gray-500">
         Pacote 1.1.1 — cadastro de produtos (dados mockados em memória,
         substituir por persistência real futuramente).
