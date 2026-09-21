@@ -1,208 +1,234 @@
-«Sistema de gerenciamento de pedidos e vendas para cantina escolar»
+<div align="center">
 
-O Fila.exe é um sistema desenvolvido para auxiliar no gerenciamento de uma cantina escolar, centralizando o cadastro de produtos, realização e controle de pedidos, vendas presenciais, gerenciamento de fila e geração de relatórios.
+# 🍔 Fila.exe
 
-O projeto está sendo desenvolvido no contexto acadêmico da disciplina de Gestão de Projetos de Software, com foco na aplicação prática de conceitos de Engenharia de Software, Gerenciamento de Projetos, Desenvolvimento de Sistemas e Banco de Dados.
+### Sistema de Gerenciamento de Pedidos e Vendas para Cantina Escolar
 
----
+<p>
+  <strong>📚 Projeto Acadêmico • IFSP • Engenharia de Software</strong>
+</p>
 
-📌 Sobre o Projeto
+<p>
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" alt="Status">
+  <img src="https://img.shields.io/badge/IFSP-Instituto%20Federal%20de%20São%20Paulo-blue" alt="IFSP">
+  <img src="https://img.shields.io/badge/documentação-Markdown-purple" alt="Documentação">
+  <img src="https://img.shields.io/badge/versionamento-Git%20%2F%20GitHub-black" alt="Git">
+</p>
 
-Atualmente, processos relacionados a pedidos e vendas de uma cantina podem envolver controles manuais e pouca centralização das informações.
-
-O Fila.exe propõe uma solução informatizada para organizar esses processos, permitindo que as informações sejam registradas e consultadas de forma estruturada.
-
-Objetivos
-
-- Centralizar o gerenciamento da cantina;
-- Facilitar o cadastro e gerenciamento de produtos;
-- Permitir o registro e acompanhamento de pedidos;
-- Organizar a fila virtual;
-- Registrar vendas presenciais;
-- Disponibilizar informações para acompanhamento das vendas;
-- Reduzir processos manuais;
-- Facilitar o controle operacional da cantina.
+</div>
 
 ---
 
-👥 Equipe e Gestão
+## 📌 Sobre o Projeto
 
-Função| Responsável
-Gerente do Projeto| Stephanie Marys
-Patrocinador| IFSP — Instituto Federal de São Paulo
-Data de elaboração| 28/08/2026
+O **Fila.exe** é um sistema desenvolvido para auxiliar no gerenciamento de uma **cantina escolar**, centralizando:
+
+- 🛒 Cadastro de produtos
+- 🧾 Realização e controle de pedidos
+- 💰 Vendas presenciais
+- 📋 Gerenciamento de fila
+- 📊 Geração de relatórios
+
+O projeto está sendo desenvolvido no contexto acadêmico da disciplina de **Gestão de Projetos de Software**, com foco na aplicação prática de conceitos de:
+
+> **Engenharia de Software • Gerenciamento de Projetos • Desenvolvimento de Sistemas • Banco de Dados**
 
 ---
 
-🎯 Escopo do Sistema
+## 🎯 Objetivos
+
+| Objetivo | Descrição |
+|---|---|
+| 🏪 **Centralização** | Centralizar o gerenciamento da cantina |
+| 📦 **Produtos** | Facilitar o cadastro e gerenciamento de produtos |
+| 🛒 **Pedidos** | Permitir o registro e acompanhamento de pedidos |
+| 📋 **Fila** | Organizar a fila virtual |
+| 💰 **Vendas** | Registrar vendas presenciais |
+| 📊 **Informações** | Disponibilizar informações para acompanhamento das vendas |
+| ⚙️ **Operação** | Reduzir processos manuais e facilitar o controle operacional |
+
+---
+
+## 👥 Equipe e Gestão
+
+| Função | Responsável |
+|---|---|
+| 👩‍💼 **Gerente do Projeto** | Stephanie Marys |
+| 🏫 **Patrocinador** | IFSP — Instituto Federal de São Paulo |
+| 📅 **Data de elaboração** | 28/08/2026 |
+
+---
+
+# 🎯 Escopo do Sistema
 
 O sistema será composto pelos seguintes módulos:
 
-Módulo| Descrição
-🔐 Login Institucional| Autenticação e controle de acesso dos usuários
-📦 Cadastro de Produtos| Gerenciamento dos produtos disponíveis na cantina
-🛒 Registro de Pedidos| Criação e armazenamento de pedidos
-📖 Catálogo| Visualização dos produtos disponíveis
-💰 Venda Presencial| Registro de vendas realizadas diretamente na cantina
-🧾 Fila Virtual| Organização e acompanhamento dos pedidos
-📋 Controle de Pedidos| Gerenciamento do status dos pedidos
-⚙️ Configuração da Cantina| Gerenciamento das configurações do sistema
-📊 Relatórios de Vendas| Consulta e análise das vendas realizadas
+| Módulo | Descrição |
+|---|---|
+| 🔐 **Login Institucional** | Autenticação e controle de acesso dos usuários |
+| 📦 **Cadastro de Produtos** | Gerenciamento dos produtos disponíveis na cantina |
+| 🛒 **Registro de Pedidos** | Criação e armazenamento de pedidos |
+| 📖 **Catálogo** | Visualização dos produtos disponíveis |
+| 💰 **Venda Presencial** | Registro de vendas realizadas diretamente na cantina |
+| 🧾 **Fila Virtual** | Organização e acompanhamento dos pedidos |
+| 📋 **Controle de Pedidos** | Gerenciamento do status dos pedidos |
+| ⚙️ **Configuração da Cantina** | Gerenciamento das configurações do sistema |
+| 📊 **Relatórios de Vendas** | Consulta e análise das vendas realizadas |
 
 ---
 
-🏗️ Arquitetura Funcional
+# 🏗️ Arquitetura Funcional
 
-A estrutura funcional prevista para o sistema pode ser representada da seguinte forma:
+A estrutura funcional prevista para o sistema:
 
+```text
                          ┌──────────────────────┐
-                         │      FILA.EXE        │
-                         │ Sistema da Cantina   │
+                         │      🍔 FILA.EXE      │
+                         │   Sistema da Cantina │
                          └──────────┬───────────┘
                                     │
              ┌──────────────────────┼──────────────────────┐
              │                      │                      │
              ▼                      ▼                      ▼
-       AUTENTICAÇÃO             PEDIDOS                 GESTÃO
+      🔐 AUTENTICAÇÃO           🛒 PEDIDOS              ⚙️ GESTÃO
              │                      │                      │
              ▼                      ▼                      ▼
-     Login Institucional      Registro de Pedidos    Produtos
-                              Fila Virtual            Configuração
+      Login Institucional     Registro de Pedidos      Produtos
+                              Fila Virtual              Configuração
                               Controle de Pedidos
                                     │
                                     ▼
-                              VENDAS / RELATÓRIOS
+                           💰 VENDAS / RELATÓRIOS
                                     │
                              ┌──────┴──────┐
                              ▼             ▼
-                       Venda Presencial   Relatórios
+                      Venda Presencial  Relatórios
+```
 
 ---
 
-📋 Requisitos Funcionais
+# 📋 Requisitos Funcionais
 
-Os principais requisitos funcionais previstos incluem:
+## 🔐 Autenticação
 
-Autenticação
+- **RF01** — O sistema deverá permitir o login utilizando e-mail institucional.
+- **RF02** — O sistema deverá validar as credenciais do usuário.
+- **RF03** — O sistema deverá controlar o acesso às funcionalidades de acordo com o perfil do usuário.
 
-- RF01 — O sistema deverá permitir o login utilizando e-mail institucional.
-- RF02 — O sistema deverá validar as credenciais do usuário.
-- RF03 — O sistema deverá controlar o acesso às funcionalidades de acordo com o perfil do usuário.
+## 📦 Produtos
 
-Produtos
+- **RF04** — O sistema deverá permitir cadastrar produtos.
+- **RF05** — O sistema deverá permitir consultar produtos.
+- **RF06** — O sistema deverá permitir alterar informações dos produtos.
+- **RF07** — O sistema deverá permitir controlar a disponibilidade dos produtos.
 
-- RF04 — O sistema deverá permitir cadastrar produtos.
-- RF05 — O sistema deverá permitir consultar produtos.
-- RF06 — O sistema deverá permitir alterar informações dos produtos.
-- RF07 — O sistema deverá permitir controlar a disponibilidade dos produtos.
+## 🛒 Pedidos
 
-Pedidos
+- **RF08** — O sistema deverá permitir criar pedidos.
+- **RF09** — O sistema deverá armazenar os pedidos.
+- **RF10** — O sistema deverá permitir acompanhar o status dos pedidos.
+- **RF11** — O sistema deverá organizar os pedidos na fila virtual.
 
-- RF08 — O sistema deverá permitir criar pedidos.
-- RF09 — O sistema deverá armazenar os pedidos.
-- RF10 — O sistema deverá permitir acompanhar o status dos pedidos.
-- RF11 — O sistema deverá organizar os pedidos na fila virtual.
+## 💰 Vendas
 
-Vendas
+- **RF12** — O sistema deverá permitir registrar vendas presenciais.
+- **RF13** — O sistema deverá armazenar as informações das vendas.
 
-- RF12 — O sistema deverá permitir registrar vendas presenciais.
-- RF13 — O sistema deverá armazenar as informações das vendas.
+## 📊 Relatórios
 
-Relatórios
+- **RF14** — O sistema deverá permitir consultar informações sobre as vendas.
+- **RF15** — O sistema deverá gerar relatórios de vendas.
 
-- RF14 — O sistema deverá permitir consultar informações sobre as vendas.
-- RF15 — O sistema deverá gerar relatórios de vendas.
-
-«Os requisitos serão refinados durante o levantamento e a análise de requisitos do projeto.»
+> 💡 **Observação:** Os requisitos serão refinados durante o levantamento e a análise de requisitos do projeto.
 
 ---
 
-🔐 Requisitos Não Funcionais
+# 🔐 Requisitos Não Funcionais
 
-Entre os requisitos não funcionais previstos estão:
-
-- RNF01 — Segurança: informações de autenticação devem ser protegidas.
-- RNF02 — Usabilidade: as telas devem apresentar navegação simples e intuitiva.
-- RNF03 — Integridade: os dados registrados devem manter consistência no banco de dados.
-- RNF04 — Disponibilidade: o sistema deve estar disponível durante o horário de funcionamento da cantina.
-- RNF05 — Manutenibilidade: o código deve ser organizado de forma a facilitar futuras alterações.
-- RNF06 — Desempenho: operações comuns devem apresentar tempo de resposta adequado ao contexto de utilização.
+| Código | Categoria | Requisito |
+|---|---|---|
+| RNF01 | 🔒 Segurança | Informações de autenticação devem ser protegidas |
+| RNF02 | 🖥️ Usabilidade | As telas devem apresentar navegação simples e intuitiva |
+| RNF03 | 🗄️ Integridade | Os dados registrados devem manter consistência no banco de dados |
+| RNF04 | 🟢 Disponibilidade | O sistema deve estar disponível durante o horário de funcionamento da cantina |
+| RNF05 | 🛠️ Manutenibilidade | O código deve ser organizado para facilitar futuras alterações |
+| RNF06 | ⚡ Desempenho | Operações comuns devem apresentar tempo de resposta adequado ao contexto de utilização |
 
 ---
 
-🗂️ Estrutura Analítica do Projeto — EAP
+# 🗂️ Estrutura Analítica do Projeto — EAP
 
-1.0 — FILA.EXE
+```text
+1.0 — 🍔 FILA.EXE
 │
-├── 1.0.1 — Login Institucional
+├── 1.0.1 — 🔐 Login Institucional
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Integração com e-mail institucional
 │   ├── Validações
 │   └── Testes
 │
-├── 1.1.1 — Cadastro de Produtos
+├── 1.1.1 — 📦 Cadastro de Produtos
 │   ├── Levantamento dos campos
 │   ├── Desenvolvimento da tela
 │   ├── Integração com banco de dados
 │   ├── Validações
 │   └── Testes
 │
-├── 1.2.1 — Registro de Pedidos
+├── 1.2.1 — 🛒 Registro de Pedidos
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Persistência dos dados
 │   ├── Validações
 │   └── Testes
 │
-├── 1.3.1 — Catálogo de Produtos
+├── 1.3.1 — 📖 Catálogo de Produtos
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Validações
 │   └── Testes
 │
-├── 1.4.1 — Venda Presencial
+├── 1.4.1 — 💰 Venda Presencial
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Persistência da venda
 │   ├── Validações
 │   └── Testes
 │
-├── 1.5.1 — Fila Virtual
+├── 1.5.1 — 🧾 Fila Virtual
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Persistência da fila
 │   ├── Validações
 │   └── Testes
 │
-├── 1.6.1 — Controle de Pedidos
+├── 1.6.1 — 📋 Controle de Pedidos
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Persistência dos dados
 │   ├── Validações
 │   └── Testes
 │
-├── 1.7.1 — Configuração da Cantina
+├── 1.7.1 — ⚙️ Configuração da Cantina
 │   ├── Definição das regras
 │   ├── Desenvolvimento da tela
 │   ├── Persistência das configurações
 │   ├── Validações
 │   └── Testes
 │
-└── 1.8.1 — Relatório de Vendas
+└── 1.8.1 — 📊 Relatório de Vendas
     ├── Definição das regras
     ├── Desenvolvimento da tela
     ├── Implementação dos relatórios
     ├── Validações
     └── Testes
+```
 
 ---
 
-🚀 Roadmap
+# 🚀 Roadmap
 
-O desenvolvimento do projeto será organizado nas seguintes etapas:
-
-🟡 Fase 1 — Planejamento
+## 🟡 Fase 1 — Planejamento
 
 - [x] Definição do projeto
 - [x] Definição da equipe
@@ -210,7 +236,7 @@ O desenvolvimento do projeto será organizado nas seguintes etapas:
 - [x] Elaboração da EAP
 - [x] Levantamento completo dos requisitos
 
-🔵 Fase 2 — Análise e Modelagem
+## 🔵 Fase 2 — Análise e Modelagem
 
 - [x] Levantamento de requisitos
 - [x] Definição dos casos de uso
@@ -220,19 +246,19 @@ O desenvolvimento do projeto será organizado nas seguintes etapas:
 - [x] Definição da arquitetura
 - [x] Protótipo das interfaces
 
-🟣 Fase 3 — Desenvolvimento
+## 🟣 Fase 3 — Desenvolvimento
 
-- [ ] Login Institucional
-- [x] Cadastro de Produtos
-- [ ] Catálogo
-- [ ] Registro de Pedidos
-- [ ] Fila Virtual
-- [ ] Controle de Pedidos
-- [ ] Venda Presencial
-- [ ] Configuração da Cantina
-- [ ] Relatórios de Vendas
+- [ ] 🔐 Login Institucional
+- [x] 📦 Cadastro de Produtos
+- [ ] 📖 Catálogo
+- [ ] 🛒 Registro de Pedidos
+- [ ] 🧾 Fila Virtual
+- [ ] 📋 Controle de Pedidos
+- [ ] 💰 Venda Presencial
+- [ ] ⚙️ Configuração da Cantina
+- [ ] 📊 Relatórios de Vendas
 
-🟠 Fase 4 — Testes
+## 🟠 Fase 4 — Testes
 
 - [ ] Testes unitários
 - [ ] Testes de integração
@@ -240,7 +266,7 @@ O desenvolvimento do projeto será organizado nas seguintes etapas:
 - [ ] Validação dos requisitos
 - [ ] Correção de erros
 
-🟢 Fase 5 — Entrega
+## 🟢 Fase 5 — Entrega
 
 - [ ] Documentação técnica
 - [ ] Manual do usuário
@@ -250,60 +276,60 @@ O desenvolvimento do projeto será organizado nas seguintes etapas:
 
 ---
 
-💻 Tecnologias
+# 💻 Tecnologias
 
 As tecnologias serão definidas durante a etapa de arquitetura e planejamento técnico.
 
-Stack
-
-Camada| Tecnologia
-Front-end| 🔄 A definir
-Back-end| 🔄 A definir
-Banco de Dados| 🔄 A definir
-Autenticação| 🔄 A definir
-Versionamento| Git / GitHub
-Documentação| Markdown
+| Camada | Tecnologia |
+|---|---|
+| 🎨 Front-end | 🔄 A definir |
+| ⚙️ Back-end | 🔄 A definir |
+| 🗄️ Banco de Dados | 🔄 A definir |
+| 🔐 Autenticação | 🔄 A definir |
+| 🌿 Versionamento | Git / GitHub |
+| 📝 Documentação | Markdown |
 
 ---
 
-📁 Estrutura do Repositório
+# 📁 Estrutura do Repositório
 
-A estrutura proposta para o repositório é:
-
+```text
 Fila.exe/
 │
-├── docs/
+├── 📚 docs/
 │   ├── requisitos/
 │   ├── diagramas/
 │   ├── arquitetura/
 │   └── projeto/
 │
-├── src/
+├── 💻 src/
 │   ├── frontend/
 │   └── backend/
 │
-├── database/
+├── 🗄️ database/
 │   ├── scripts/
 │   └── migrations/
 │
-├── tests/
+├── 🧪 tests/
 │   ├── unit/
 │   └── integration/
 │
 ├── .gitignore
 ├── README.md
 └── LICENSE
+```
 
-«A estrutura poderá ser ajustada de acordo com a tecnologia e arquitetura definidas pela equipe.»
+> 💡 A estrutura poderá ser ajustada de acordo com a tecnologia e arquitetura definidas pela equipe.
 
 ---
 
-🌿 Estratégia de Versionamento
+# 🌿 Estratégia de Versionamento
 
-O projeto utilizará Git para controle de versão.
+O projeto utilizará **Git** para controle de versão.
 
-Sugestão de organização das branches:
+### 🌳 Estratégia de Branches
 
+```text
 main
  │
  ├── develop
@@ -315,64 +341,73 @@ main
  │    └── feature/relatorios
  │
  └── release/
+```
 
-Padrão de commits
+### 📝 Padrão de Commits
 
-Sugestão de utilização de Conventional Commits:
+Será utilizada a convenção **Conventional Commits**:
 
+```text
 feat: adiciona cadastro de produtos
 fix: corrige validação do login
 docs: atualiza documentação
 refactor: reorganiza serviço de pedidos
 test: adiciona testes para cadastro
 chore: atualiza configurações do projeto
+```
 
 ---
 
-🧪 Estratégia de Testes
+# 🧪 Estratégia de Testes
 
 Cada funcionalidade deverá passar por uma etapa de validação antes de ser considerada concluída.
 
-Desenvolvimento
-       │
-       ▼
-Validação
-       │
-       ▼
-Testes
-       │
-   ┌───┴───┐
-   │       │
- Falha    OK
-   │       │
-   ▼       ▼
-Correção  Merge
-   │
-   └──────► Testes
+```text
+       💻 Desenvolvimento
+               │
+               ▼
+          🔎 Validação
+               │
+               ▼
+           🧪 Testes
+               │
+          ┌────┴────┐
+          │         │
+        ❌ Falha    ✅ OK
+          │         │
+          ▼         ▼
+      🔧 Correção  🔀 Merge
+          │
+          └──────────► 🧪 Testes
+```
 
 ---
 
-📊 Critério de Conclusão
+# 📊 Critério de Conclusão
 
 Uma funcionalidade será considerada concluída quando:
 
-- [x] Requisitos definidos;
-- [ ] Interface implementada;
-- [ ] Regras de negócio implementadas;
-- [ ] Integração com banco de dados realizada, quando aplicável;
-- [ ] Validações implementadas;
-- [ ] Testes realizados;
-- [ ] Erros críticos corrigidos;
-- [ ] Código revisado;
-- [ ] Documentação atualizada.
+- [x] Requisitos definidos
+- [ ] Interface implementada
+- [ ] Regras de negócio implementadas
+- [ ] Integração com banco de dados realizada, quando aplicável
+- [ ] Validações implementadas
+- [ ] Testes realizados
+- [ ] Erros críticos corrigidos
+- [ ] Código revisado
+- [ ] Documentação atualizada
 
 ---
 
-📚 Documentação do Projeto
+# 📚 Documentação do Projeto
 
-A documentação complementar ficará disponível no diretório ""/docs"" (./docs).
+A documentação complementar ficará disponível no diretório:
 
-Documentos previstos:
+```text
+/docs
+```
+
+### Documentos previstos
 
 - 📄 Documento de requisitos
 - 📊 EAP
@@ -385,40 +420,57 @@ Documentos previstos:
 
 ---
 
-📌 Status
+# 📌 Status do Projeto
 
-🚧 Em desenvolvimento
+<div align="center">
 
-«Este projeto está em desenvolvimento acadêmico e poderá sofrer alterações durante as etapas de análise, desenvolvimento e validação.»
+### 🚧 EM DESENVOLVIMENTO
 
----
+O projeto está em desenvolvimento acadêmico e poderá sofrer alterações durante as etapas de análise, desenvolvimento e validação.
 
-🎓 Contexto Acadêmico
-
-Projeto desenvolvido no Instituto Federal de São Paulo — IFSP, com aplicação de conceitos relacionados a:
-
-- Engenharia de Software;
-- Gerenciamento de Projetos;
-- Análise e Desenvolvimento de Sistemas;
-- Banco de Dados;
-- Desenvolvimento de Software;
-- Testes de Software;
-- Controle de Versionamento.
+</div>
 
 ---
 
-👩‍💻 Equipe
+# 🎓 Contexto Acadêmico
 
-Stephanie Marys — Gerente do Projeto
-Maria Passareli — Gerente de Desenvolvimento
-Mateus Ciffoni - Desenvolvedor 
-Vinícius Do Vale - Desenvolvedor 
+Projeto desenvolvido no:
 
-IFSP — Instituto Federal de São Paulo
+**🏫 Instituto Federal de São Paulo — IFSP**
+
+Com aplicação de conceitos relacionados a:
+
+- 💻 Engenharia de Software
+- 📋 Gerenciamento de Projetos
+- 🔎 Análise e Desenvolvimento de Sistemas
+- 🗄️ Banco de Dados
+- ⚙️ Desenvolvimento de Software
+- 🧪 Testes de Software
+- 🌿 Controle de Versionamento
 
 ---
 
-<p align="center">
-  <strong>🍔 Fila.exe</strong><br>
-  Sistema de Gerenciamento da Cantina Escolar
-</p>
+# 👩‍💻 Equipe
+
+| Integrante | Função |
+|---|---|
+| 👩‍💼 **Stephanie Marys** | Gerente do Projeto |
+| 👩‍💻 **Maria Passareli** | Gerente de Desenvolvimento |
+| 👨‍💻 **Mateus Ciffoni** | Desenvolvedor |
+| 👨‍💻 **Vinícius Do Vale** | Desenvolvedor |
+
+### 🏫 IFSP — Instituto Federal de São Paulo
+
+---
+
+<div align="center">
+
+## 🍔 Fila.exe
+
+### Sistema de Gerenciamento da Cantina Escolar
+
+---
+
+**📚 Projeto acadêmico • IFSP • 2026**
+
+</div>
