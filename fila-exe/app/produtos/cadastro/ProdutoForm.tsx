@@ -10,13 +10,24 @@ export default function ProdutoForm() {
     estadoInicialCadastro
   );
   const formRef = useRef<HTMLFormElement>(null);
+  const success = Boolean(
+    state && typeof state === "object" && "success" in state && state.success
+  );
+  const message =
+    state && typeof state === "object" && "message" in state
+      ? String(state.message ?? "")
+      : "";
+  const errors =
+    state && typeof state === "object" && "errors" in state && state.errors
+      ? state.errors
+      : estadoInicialCadastro.errors ?? {};
 
   // Limpa o formulário após um cadastro bem-sucedido.
   useEffect(() => {
-    if (state.success) {
+    if (success) {
       formRef.current?.reset();
     }
-  }, [state]);
+  }, [success]);
 
   return (
     <form ref={formRef} action={formAction} className="mt-6 space-y-4" noValidate>
@@ -32,9 +43,7 @@ export default function ProdutoForm() {
           className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
           placeholder="Ex: Coxinha de frango"
         />
-        {state.errors.nome && (
-          <p className="mt-1 text-sm text-red-600">{state.errors.nome}</p>
-        )}
+        {errors.nome && <p className="mt-1 text-sm text-red-600">{errors.nome}</p>}
       </div>
 
       <div>
@@ -49,8 +58,8 @@ export default function ProdutoForm() {
           className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
           placeholder="Ex: Salgado frito recheado com frango desfiado"
         />
-        {state.errors.descricao && (
-          <p className="mt-1 text-sm text-red-600">{state.errors.descricao}</p>
+        {errors.descricao && (
+          <p className="mt-1 text-sm text-red-600">{errors.descricao}</p>
         )}
       </div>
 
@@ -68,9 +77,7 @@ export default function ProdutoForm() {
             className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
             placeholder="0,00"
           />
-          {state.errors.preco && (
-            <p className="mt-1 text-sm text-red-600">{state.errors.preco}</p>
-          )}
+          {errors.preco && <p className="mt-1 text-sm text-red-600">{errors.preco}</p>}
         </div>
 
         <div>
@@ -92,8 +99,8 @@ export default function ProdutoForm() {
               </option>
             ))}
           </select>
-          {state.errors.categoria && (
-            <p className="mt-1 text-sm text-red-600">{state.errors.categoria}</p>
+          {errors.categoria && (
+            <p className="mt-1 text-sm text-red-600">{errors.categoria}</p>
           )}
         </div>
       </div>
@@ -111,16 +118,16 @@ export default function ProdutoForm() {
         </label>
       </div>
 
-      {state.message && (
+      {message && (
         <p
           className={
-            state.success
+            success
               ? "text-sm font-medium text-emerald-600"
               : "text-sm font-medium text-red-600"
           }
           role="status"
         >
-          {state.message}
+          {message}
         </p>
       )}
 
