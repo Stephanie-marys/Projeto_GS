@@ -1,7 +1,8 @@
 "use client";
 
 import { useActionState, useEffect, useRef } from "react";
-import { cadastrarProduto, estadoInicialCadastro } from "./actions";
+import { cadastrarProduto } from "./actions";
+import { estadoInicialCadastro } from "./estado";
 import { CATEGORIAS } from "@/lib/produtos/types";
 
 export default function ProdutoForm() {

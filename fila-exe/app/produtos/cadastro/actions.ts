@@ -2,20 +2,9 @@
 
 import { revalidatePath } from "next/cache";
 import { criarProduto } from "@/lib/produtos/store";
-import { validarProduto, type CamposProduto } from "@/lib/produtos/validation";
+import { validarProduto } from "@/lib/produtos/validation";
 import type { CategoriaProduto } from "@/lib/produtos/types";
-
-export interface CadastroProdutoState {
-  success: boolean;
-  message: string;
-  errors: Partial<Record<CamposProduto, string>>;
-}
-
-export const estadoInicialCadastro: CadastroProdutoState = {
-  success: false,
-  message: "",
-  errors: {},
-};
+import type { CadastroProdutoState } from "./estado";
 
 export async function cadastrarProduto(
   _prevState: CadastroProdutoState,
